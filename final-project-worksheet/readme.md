@@ -17,7 +17,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Using data from an article as well as personal findings, I will be making an interactive map showing the noisiest and quietest places in NYC. I plan to use mapbox and a .csv file to import data. 
+
 
 ## Wireframes
 

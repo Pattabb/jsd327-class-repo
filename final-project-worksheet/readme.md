@@ -17,7 +17,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Using data from an article as well as personal findings, I will be making an interactive map showing the noisiest and quietest places in NYC. I plan to use mapbox and a .csv file to import data. 
+Using data from an article as well as personal findings, I will be making an interactive map showing the noisiest and quietest places in NYC. I plan to use mapbox and a .csv file to import data. Also, would like to implement a basic bart chart showing location and Dba levels.
 
 
 ## Wireframes

@@ -22,7 +22,7 @@ Using data from an article as well as personal findings, I will be making an int
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+(title here) will be a 2 page application with a simple title/landing page and a map/scroller page. The scroll bar will have location links that will tell the map to flyover to its corresponding coordinates. Also, there will be a footer with location info and data visualization. 
 
 ## Priority Matrix
 

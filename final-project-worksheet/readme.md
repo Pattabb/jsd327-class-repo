@@ -28,7 +28,18 @@ http://res.cloudinary.com/dutwvzxot/image/upload/v1525792560/IMG-1256.jpg
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
+- Design Idea
+- landing page
+- Map
+- HTML / CSS
+- Data Set
+- Record coordinates
+- Map markers
+- Locations bar
+- Footer
+- Data chart
+- Dba meters
+- photos/info
 
 ### MVP/PostMVP - 5min
 

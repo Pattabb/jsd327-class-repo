@@ -32,6 +32,9 @@ http://res.cloudinary.com/dutwvzxot/image/upload/v1525792560/IMG-1256.jpg
 - landing page
 - Map
 - HTML / CSS
+- click functions
+- hover functions
+- flyover function
 - Data Set
 - Record coordinates
 - Map markers

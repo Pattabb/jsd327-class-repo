@@ -24,6 +24,8 @@ Using data from an article as well as personal findings, I will be making an int
 
 (title here) will be a 2 page application with a simple title/landing page and a map/scroller page. The scroll bar will have location links that will tell the map to flyover to its corresponding coordinates. Also, there will be a footer with location info and data visualization. 
 
+http://res.cloudinary.com/dutwvzxot/image/upload/v1525792560/IMG-1256.jpg
+
 ## Priority Matrix
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  

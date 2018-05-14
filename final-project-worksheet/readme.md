@@ -50,14 +50,19 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP 
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
+-map
+-coordinates
+-data set
+-location list
+-DBa and location info
+-scroll or click events
 
 #### PostMVP 
 
-- Add user auth
+- Data chart
+- map markers
+- landing page
+
 
 ## Functional Components
 
@@ -67,9 +72,15 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| HTML and CSS| H | 3hrs | 2 hrs | 2 hrs |
+| map | H | 3hrs| 3.5hrs | 3.5hrs |
+| Flyover function | H | 2hrs | 2 hrs | 2 hrs |
+| Create data set | H | 2hrs | 1.5 hrs | 1.5 hrs |
+| coordinates | H | 3hrs| 3.5hrs | 3.5hrs |
+| Location list | H | 3hrs | 2.5hrs | 2.5hrs |
+| DBa and location info | H | 2hrs | 2 hrs | 2 hrs |
+| Click / scroll function | H | 4hrs | 4 hrs | 4 hrs |
+| Total | H | 22 hrs|  21 hrs | 21 hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.

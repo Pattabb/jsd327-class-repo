@@ -50,12 +50,12 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP 
 
--map
--coordinates
--data set
--location list
--DBa and location info
--scroll or click events
+- map
+- coordinates
+- data set
+- location list
+- DBa and location info
+- scroll or click events
 
 #### PostMVP 
 

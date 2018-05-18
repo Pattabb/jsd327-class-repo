@@ -1,0 +1,338 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Noise of NY</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #features { }
+    </style>
+</head>
+<body>
+
+
+
+
+<style>
+#map {
+    position: fixed;
+    width:80%;
+}
+#features {
+    width: 20%;
+    margin-left: 80%;
+    font-family: sans-serif;
+    overflow-y: hidden;
+    background-color: #fafafa;
+}
+section {
+    padding:  25px 50px;
+    line-height: 30px;
+    border-bottom: 4px solid #ddd;
+    opacity: 0.25;
+    font-size: 18px;
+}
+section.active {
+    opacity: 1;
+
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 200px;
+}
+</style>
+
+
+
+<!-- //Locations -->
+
+<div id='map'></div>
+<div id='features'>
+
+    <!-- <section id='Krakatoa' class='active'>
+        <h3>Krakatoa Eruption</h3>
+        <p></p>
+    </section>
+    <section id='Yellowstone'>
+        <h3>Yellowstone national Park</h3>
+        <p></p>
+    </section> -->
+    <section id='40th'>
+        <h3>40th st. btwn 5th and 6th Ave. </h3>
+        <p></p>
+    </section>
+    <section id='TimesSquare'>
+        <h3>Times Square</h3>
+        <p></p>
+    </section>
+    <section id='Penn'>
+        <h3>Penn Station during rush hour</h3>
+        <p></p>
+    </section>
+    <section id='Courtsq'>
+        <h3>Under the 7 train at Court Square</h3>
+        <p></p>
+    </section>
+    <section id='LGA'>
+        <h3>LGA approach @ prospect park west</h3>
+        <p></p>
+    </section>
+    <section id='US'>
+        <h3>4/5/6 platform @ Union Square</h3>
+        <p></p>
+
+    </section>
+    <section id='Drummers'>
+        <h3>2 bucket drummers at Grand central</h3>
+        <p></p>
+    </section>
+    <section id='JFK'>
+        <h3>JFK approach at Springfield Gardens</h3>
+        <p></p>
+    </section>
+    <section id='Cooper'>
+        <h3>Anechoic Chamber at Cooper Union</h3>
+        <p></p>
+    </section>
+    <section id='NYT'>
+        <h3>Empty office at New York Times</h3>
+        <p></p>
+    </section>
+    <section id='East'>
+        <h3>East river edge</h3>
+        <p></p>
+    </section>
+    <section id='Middle'>
+        <h3>Middle of Central Park</h3>
+        <p></p>
+    </section>
+    <section id='Earth'>
+        <h3>New York Earth Room</h3>
+        <p></p>
+    </section>
+    <section id='PSAD'>
+        <h3>PSAD synthetic Desert III</h3>
+        <p></p>
+    </section>
+    <section id='Bryant'>
+        <h3>Platform for the F/B/D @ 42nd st. - Bryan park</h3>
+        <p></p>
+    </section>
+    <section id='Astor'>
+        <h3>Astor Chinese garden</h3>
+        <p></p>
+    </section>
+    <section id='Cloisters'>
+        <h3>The Cloisters</h3>
+        <p></p>
+    </section>
+    <small id="citation">
+        Development: Patrick Tabb<br>Data: Patrick Tabb & <a href='http://mentalfloss.com/article/61001/how-find-nycs-loudest-and-quietest-places-and-everywhere-between'>Nick Geene</a>
+    </small>
+
+</div>
+
+
+
+<!-- Map coordinates -->
+
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoicGF0dGFiYiIsImEiOiJjamducXRucjkwZXFmMnhtZzhmN2syeGR0In0.WsZTTQNy4hyzqp8Whf_Vmw';
+
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/pattabb/cjgpjzfyj000x2rp3msrlhlfn',
+    center: [-73.915923,  40.768426],
+    zoom: 10.5,
+    bearing: 7,
+    pitch: 10
+});
+
+var chapters = {
+    // 'Krakatoa': {
+    //     bearing: 27,
+    //     center: [105.423674,  -6.101563],
+    //     zoom: 11.5,
+    //     pitch: 20,
+    //
+    //
+    //
+    // },
+    // 'Yellowstone': {
+    //
+    //     center: [ -110.497698,  44.508084],
+    //     bearing: 7,
+    //     zoom: 7,
+    //     pitch: 0
+    // },
+    '40th': {
+        bearing: 7,
+        center: [-73.983822, 40.753031],
+        zoom: 17,
+        speed: 0.6,
+        pitch: 11
+    },
+    'TimesSquare': {
+        bearing: 7,
+        center: [-73.986002, 40.757374],
+        zoom: 17,
+        speed: 0.6,
+        pitch: 11,
+
+    },
+    'Penn': {
+      bearing: 7,
+      center: [-73.993405,  40.752220],
+      zoom: 17,
+      speed: 0.6,
+      pitch: 11
+    },
+
+    'Courtsq': {
+      bearing: 7,
+      center: [-73.943838, 40.746496],
+      zoom: 17,
+      speed: 0.6,
+      pitch: 11
+    },
+
+    'LGA': {
+      bearing: 7,
+      center: [-73.973996, 40.666411],
+      zoom: 15,
+      speed: 0.6,
+      pitch: 11
+    },
+    'US': {
+      bearing: 7,
+      center: [-73.9912, 40.735],
+      zoom: 16.5,
+      speed: 0.6,
+      pitch: 11
+    },
+    'Drummers': {
+      bearing: 7,
+      center: [-73.977311,  40.752622],
+      zoom: 17,
+      speed: 0.6,
+      pitch: 11
+    },
+    'JFK': {
+      bearing: 7,
+      center: [-73.769022,  40.661356],
+      zoom: 13.75,
+      speed: 0.6,
+      pitch: 11
+    },
+    'Cooper': {
+      bearing: 7,
+      center: [-73.991642, 40.728099],
+      zoom: 18,
+      speed: 0.6,
+      pitch: 11
+    },
+    'NYT': {
+      bearing: 7,
+      center: [-73.990207,  40.756156],
+      zoom: 18,
+      speed: 0.6,
+      pitch: 11
+    },
+    'East': {
+      bearing: 7,
+      center: [-73.973675, 40.719831],
+      zoom: 16,
+      speed: 0.6,
+      pitch: 11
+    },
+    'Middle': {
+      bearing: 7,
+      center: [-73.967063, 40.781885],
+      zoom: 16,
+      speed: 0.6,
+      pitch: 11
+    },
+    'Earth': {
+      bearing: 7,
+      center: [-73.999848,  40.726012],
+      zoom: 19,
+      speed: 0.6,
+      pitch: 11
+    },
+    'PSAD': {
+      bearing: 7,
+      center: [-73.958965,  40.782934],
+      zoom: 18,
+      speed: 0.6,
+      pitch: 11
+    },
+    'Bryant': {
+      bearing: 7,
+      center: [-73.984143,  40.755083],
+      zoom: 18,
+      speed: 0.6,
+      pitch: 11
+    },
+    'Astor': {
+      bearing: 7,
+      center: [ -73.962723, 40.779131],
+      zoom: 18,
+      speed: 0.6,
+      pitch: 11
+    },
+    'Cloisters': {
+      bearing: 7,
+      center: [-73.931878,  40.864838],
+      zoom: 18,
+      speed: 0.6,
+      pitch: 11
+    }
+
+};
+
+
+
+
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+
+var activeChapterName = '40th';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+
+    map.flyTo(chapters[chapterName]);
+
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+
+    activeChapterName = chapterName;
+}
+
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom >0;
+}
+
+</script>
+
+</body>
+</html>
